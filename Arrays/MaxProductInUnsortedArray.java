@@ -48,52 +48,54 @@ If you use Sort :O(nlogn); S.C:O(1)
 
 
 
-class arrayimp{
-    public int getMaxMul(int arr[]){
+import java.util.*;
+class arrimp{
+    public int getmax(int arr[]){
         if(arr.length<2){
             return -1;
         }
         if(arr.length==2){
-            return (arr[0]*arr[1]);
+            return(arr[0]*arr[1]);
         }
-        
-        
         int smallest=arr[0]<arr[1]?arr[0]:arr[1];
-        int secsmallest=arr[0]>arr[1]? arr[0]:arr[1];
-        
-        int greatest=arr[0]>arr[1]? arr[0]:arr[1];
+        int secsmallest=arr[0]>arr[1]?arr[0]:arr[1];
+
+        int greatest=arr[0]>arr[1]?arr[0]:arr[1];
         int secgreatest=arr[0]<arr[1]?arr[0]:arr[1];
-        
+
         for(int i=2;i<arr.length;i++){
             if(arr[i]<smallest){
-                secsmallest=smallest;
+                smallest=secsmallest;
                 smallest=arr[i];
             }else if(arr[i]<secsmallest){
                 secsmallest=arr[i];
             }
-            
             if(arr[i]>greatest){
-                secgreatest=greatest;
+                greatest=secgreatest;
                 greatest=arr[i];
             }else if(arr[i]>secgreatest){
                 secgreatest=arr[i];
             }
         }
-            int firsttwo=smallest*secsmallest;
-            int lasttwo=greatest*secgreatest;
-            
-            return firsttwo>lasttwo? firsttwo:lasttwo;
-        
-        
-    }
+        int firsttwo=smallest*secsmallest;
+        int lasttwo=greatest*secgreatest;
+        return firsttwo>lasttwo? firsttwo:lasttwo;
 
+    } 
 }
-public class MaxProductInUnsortedArray
-{
-	public static void main(String[] args) {
-		arrayimp a=new arrayimp();
-		int arr[]={-11,-2,0,3,5};
-	
-		System.out.println(a.getMaxMul(arr));
-	}
+public class MaxProductInUnsortedArray {
+    public static void main(String[] args) {
+    int num;
+    Scanner sc=new Scanner(System.in);
+    arrimp a=new arrimp();
+    int arr[]=new int[100];
+    num=sc.nextInt();
+
+    System.out.println("Enter the elements of the array: ");  
+    for(int k=0;k<num;k++){
+        arr[k]=sc.nextInt();
+    }
+     
+    System.out.println(a.getmax(arr));
+    }
 }
