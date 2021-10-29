@@ -3,7 +3,7 @@
 Java 
 =======
 
-Participating in the [#HacktoberFest2021](https://hacktoberfest.digitalocean.com/)
+Participating in the [HacktoberFest2021](https://hacktoberfest.digitalocean.com/)
 
 ## What is Hacktoberfest ?
 
@@ -19,7 +19,7 @@ Open source refers to source code that is publicly accessible and allows anyone 
 
 ## Instructions
 
-* First you need to get yourself registered for Hacktoberfest. [Signup](https://hacktoberfest.digitalocean.com/register) for the Hacktoberfest 2021 
+* First you need to get register for Hacktoberfest. [Signup](https://hacktoberfest.digitalocean.com/register) for the Hacktoberfest 2021 
 
 * Now you can search for the available issues for Hacktoberfest on this [link](https://github.com/search?q=label%3Ahacktoberfest+state%3Aopen&type=Issues) and start fixing those and contributing. 
 
